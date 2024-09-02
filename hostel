@@ -1,0 +1,113 @@
+/*
+SQLyog Ultimate v8.82 
+MySQL - 5.1.50-community : Database - hostel
+*********************************************************************
+*/
+
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`hostel` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+USE `hostel`;
+
+/*Table structure for table `login` */
+
+DROP TABLE IF EXISTS `login`;
+
+CREATE TABLE `login` (
+  `username` varchar(20) DEFAULT NULL,
+  `password` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `login` */
+
+insert  into `login`(`username`,`password`) values ('admin','admin');
+
+/*Table structure for table `mess` */
+
+DROP TABLE IF EXISTS `mess`;
+
+CREATE TABLE `mess` (
+  `stuid` int(4) DEFAULT NULL,
+  `month` varchar(20) DEFAULT NULL,
+  `yr` varchar(10) DEFAULT NULL,
+  `paid` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `mess` */
+
+/*Table structure for table `room` */
+
+DROP TABLE IF EXISTS `room`;
+
+CREATE TABLE `room` (
+  `academ` varchar(15) DEFAULT NULL,
+  `stuname` varchar(20) DEFAULT NULL,
+  `regno` varchar(20) DEFAULT NULL,
+  `gender` varchar(10) DEFAULT NULL,
+  `deg` varchar(20) DEFAULT NULL,
+  `degdur` varchar(10) DEFAULT NULL,
+  `yr` varchar(5) DEFAULT NULL,
+  `allot` varchar(15) DEFAULT NULL,
+  `floor` varchar(10) DEFAULT NULL,
+  `roomtype` varchar(10) DEFAULT NULL,
+  `roomno` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `room` */
+
+insert  into `room`(`academ`,`stuname`,`regno`,`gender`,`deg`,`degdur`,`yr`,`allot`,`floor`,`roomtype`,`roomno`) values ('2017-2018','sldknv','868688','Male','Graduate','3','2018','12-12-1212','3','Ac','5');
+
+/*Table structure for table `rooms` */
+
+DROP TABLE IF EXISTS `rooms`;
+
+CREATE TABLE `rooms` (
+  `id` varchar(20) DEFAULT NULL,
+  `1` varchar(20) DEFAULT NULL,
+  `2` varchar(20) DEFAULT NULL,
+  `3` varchar(20) DEFAULT NULL,
+  `4` varchar(20) DEFAULT NULL,
+  `5` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `rooms` */
+
+insert  into `rooms`(`id`,`1`,`2`,`3`,`4`,`5`) values ('1','Not Available','Not Available','Not Available','Not Available','Not Available'),('2','Not Available','Not Available','Not Available','Not Available','Not Available'),('3','Not Available','Not Available','Not Available','Not Available','Not Available'),('4','Not Available','Not Available','Not Available','Not Available','Not Available'),('5','Available','Not Available','Available','Not Available','Not Available'),('6','Not Available','Not Available','Not Available','Not Available','Not Available'),('7','Not Available','Not Available','Not Available','Not Available','Not Available'),('8','Not Available','Not Available','Not Available','Not Available','Not Available'),('9','Not Available','Not Available','Not Available','Not Available','Not Available'),('10','Not Available','Not Available','Not Available','Not Available','Not Available');
+
+/*Table structure for table `stuname` */
+
+DROP TABLE IF EXISTS `stuname`;
+
+CREATE TABLE `stuname` (
+  `stuid` int(4) DEFAULT NULL,
+  `stuname` varchar(30) DEFAULT NULL,
+  `fatname` varchar(30) DEFAULT NULL,
+  `gen` varchar(15) DEFAULT NULL,
+  `dob` varchar(15) DEFAULT NULL,
+  `nat` varchar(20) DEFAULT NULL,
+  `rel` varchar(20) DEFAULT NULL,
+  `doa` varchar(15) DEFAULT NULL,
+  `academ` varchar(15) DEFAULT NULL,
+  `deg` varchar(20) DEFAULT NULL,
+  `cour` varchar(20) DEFAULT NULL,
+  `dept` varchar(20) DEFAULT NULL,
+  `tc` varchar(20) DEFAULT NULL,
+  `applno` varchar(20) DEFAULT NULL,
+  `tempno` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `stuname` */
+
+insert  into `stuname`(`stuid`,`stuname`,`fatname`,`gen`,`dob`,`nat`,`rel`,`doa`,`academ`,`deg`,`cour`,`dept`,`tc`,`applno`,`tempno`) values (2450,'sldknv','lkdvn','Male','123123','dfsodv','efojv','2323','2017-2018','Graduate','BCA','Computer Science','23123','3424234234','234234324');
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
